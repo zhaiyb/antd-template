@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": false,
+      "baseUrl": "./",
+      "paths": {
+        "_containers/*": ["src/containers/*"],
+        "_components/*": ["src/components/*"],
+        "_src/*": ["src/*"]
+      }
+  },
+  "exclude": ["node_modules", "dist"]
+}
