@@ -1,4 +1,6 @@
 var path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const src = path.resolve(__dirname, '../src');
 
 module.exports = {
@@ -12,13 +14,9 @@ module.exports = {
     rules: [{
       test: /\.(js|jsx)$/,
       use: [
-        'eslint-loader'
+        'eslint-loader',
+        'babel-loader'
       ],
-      exclude: /node_modules/
-    },
-    {
-      test: /\.(js|jsx)$/,
-      use: 'happypack/loader',
       exclude: /node_modules/
     },
     {
@@ -29,26 +27,26 @@ module.exports = {
         loader: 'css-loader', // translates CSS into CommonJS
       }, {
         loader: 'less-loader', // compiles Less to CSS
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader'
-          }
-        ]
-      }, {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: 'img/[name].[hash:7].[ext]'
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader'
       }]
+    },
+    {
+      test: /\.html$/,
+      use: [
+        {
+          loader: 'html-loader'
+        }
+      ]
+    }, {
+      test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+      loader: 'url-loader',
+      options: {
+        limit: 10000,
+        name: 'img/[name].[hash:7].[ext]'
+      }
+    },
+    {
+      test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+      loader: 'url-loader'
     }]
   },
   resolve: {
@@ -63,5 +61,11 @@ module.exports = {
       _containers: path.resolve(__dirname, '../src/containers/'),
       _constants: path.resolve(__dirname, '../src/constants/'),
     }
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(src, 'index.html'),
+      filename: 'index.html'
+    })
+  ]
 };

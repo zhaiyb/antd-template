@@ -19,7 +19,8 @@ module.exports = {
         map: [
           ['_src', path.resolve(__dirname, './src/')],
           ['_components', path.resolve(__dirname, './src/components/')],
-          ['_containers', path.resolve(__dirname, './src/containers/')]
+          ['_containers', path.resolve(__dirname, './src/containers/')],
+          ['_constants', path.resolve(__dirname, './src/constants/')]
         ],
         extensions: ['.js', '.less', '.jsx']
       },

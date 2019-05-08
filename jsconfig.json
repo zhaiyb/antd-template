@@ -6,6 +6,7 @@
       "paths": {
         "_containers/*": ["src/containers/*"],
         "_components/*": ["src/components/*"],
+        "_constants/*": ["src/constants/*"],
         "_src/*": ["src/*"]
       }
   },
