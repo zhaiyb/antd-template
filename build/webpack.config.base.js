@@ -22,11 +22,14 @@ module.exports = {
     {
       test: /\.less$/,
       use: [{
-        loader: 'style-loader',
+        loader: 'style-loader', // creates style nodes from JS strings
       }, {
         loader: 'css-loader', // translates CSS into CommonJS
       }, {
         loader: 'less-loader', // compiles Less to CSS
+        options: {
+          javascriptEnabled: true
+        }
       }]
     },
     {
@@ -65,7 +68,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(src, 'index.html'),
-      filename: 'index.html'
+      filename: 'index.html',
+      favicon: path.resolve(src, 'zyb.ico')
     })
   ]
 };

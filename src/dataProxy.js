@@ -3,11 +3,10 @@
  */
 import axios from 'axios';
 import { message } from 'antd';
-import config from './config';
 
-axios.defaults.headers.common['Authorization'] = localStorage.getItem('token') || '';
+// axios.defaults.headers.common['Authorization'] = localStorage.getItem('token') || '';
 // axios.defaults.headers.common['Content-Type'] = 'application/json;charset=UTF-8';
-axios.defaults.headers.common.timeout = config.timeout;
+axios.defaults.headers.common.timeout = 10000;
 
 // 处理统一处理
 axios.interceptors.response.use((response) => {
