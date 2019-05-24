@@ -2,14 +2,14 @@ import moment from 'moment';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
-import Routes from './routes';
-import stores from './stores';
+import App from './App';
+import rootStore from './stores';
 import './less/index.less';
 moment.locale('zh_CN');
 
 ReactDOM.render(
-  <Provider {...stores}>
-    {Routes}
+  <Provider {...rootStore}>
+    <App />
   </Provider>,
   document.getElementById('root')
 );

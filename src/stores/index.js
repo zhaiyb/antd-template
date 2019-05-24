@@ -2,12 +2,10 @@
  * mobx store
  */
 
-import DemoStore from './demoStore';
+import demoStore from './demoStore';
 
-class RootStore {
-  constructor() {
-    this.demoStore = new DemoStore(this);
-  }
+const rootStore = {
+  demoStore
 }
 
-export default new RootStore();
+export default rootStore;

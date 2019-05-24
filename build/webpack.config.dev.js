@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const base = require('./webpack.config.base');
 const config = require('./config');
 
-base.output.publicPath = `http://localhost:3000/`;
+base.output.publicPath = `http://localhost:${config.dev.port}/`;
 
 base.plugins.unshift(
   new webpack.HotModuleReplacementPlugin({})

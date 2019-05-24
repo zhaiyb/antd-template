@@ -1,5 +1,5 @@
 const pageURL = {
-  demo: '/demo', // demo
   home: '/', // 主页
+  demo: '/demo', // demo
 };
 export default pageURL;
