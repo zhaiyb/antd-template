@@ -2,7 +2,6 @@ var path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const src = path.resolve(__dirname, '../src');
-
 module.exports = {
   mode: 'development',
   entry: path.resolve(src, 'index.js'),
@@ -17,7 +16,9 @@ module.exports = {
         'eslint-loader',
         'babel-loader'
       ],
-      exclude: /node_modules/
+      exclude: [
+        /node_modules/
+      ]
     },
     {
       test: /\.less$/,

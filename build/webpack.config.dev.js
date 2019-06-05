@@ -12,7 +12,7 @@ base.plugins.unshift(
 module.exports = Object.assign(base, {
   mode: 'development',
   devServer: {
-    contentBase: path.resolve(__dirname, '../src'),
+    contentBase: path.resolve(__dirname, '../'),
     hot: true,
     port: config.dev.port,
     proxy: {
