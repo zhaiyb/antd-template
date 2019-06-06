@@ -1,5 +1,6 @@
 const pageURL = {
   home: '/', // 主页
-  demo: '/demo', // demo
+  ueditor: '/ueditor', // ueditor
+  swiper: '/swiper', // swiper
 };
 export default pageURL;
