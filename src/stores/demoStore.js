@@ -12,12 +12,14 @@ import demoService from '../service/demo';
 class DemoStore {
   // 标签列表
   @observable todoList = [];
+
   // 获取标签列表
   fetchList() {
     return demoService.fetchList().then(
       action((data) => {
-      this.todoList = data;
-    }));
+        this.todoList = data;
+      }),
+    );
   }
 }
 const demoStore = new DemoStore();

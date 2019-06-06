@@ -24,22 +24,22 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       {
-          routeMap.map(item => (
-            <Route
-              key={item.path}
-              path={item.path}
-              exact={item.exact}
-              component={
-                  item.redirect ? (() => <Redirect to={item.redirect} />) : Loadable({
-                    loader: () => import(`${item.component}`),
-                    loading: Loading,
-                    delay,
-                    timeout,
-                  })
-                }
-            />
-          ))
-        }
+        routeMap.map(item => (
+          <Route
+            key={item.path}
+            path={item.path}
+            exact={item.exact}
+            component={
+              item.redirect ? (() => <Redirect to={item.redirect} />) : Loadable({
+                loader: () => import(`${item.component}`),
+                loading: Loading,
+                delay,
+                timeout,
+              })
+            }
+          />
+        ))
+      }
     </Switch>
   </BrowserRouter>
 );

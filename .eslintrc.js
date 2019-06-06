@@ -2,12 +2,18 @@ var path = require('path');
 
 module.exports = {
     parser: "babel-eslint",
-    "extends": "airbnb",
+    "extends": [
+        "airbnb",
+        "plugin:import/react",
+    ],
     "env": {
         "browser": true
     },
     "rules": {
-        "react/button-has-type": 0,
+        "react/button-has-type": "never",
+        "react/prop-types": "never",
+        "react/sort-comp": "never",
+        "import/extensions": "never"
     },
     "settings": {
         'import/resolver': {

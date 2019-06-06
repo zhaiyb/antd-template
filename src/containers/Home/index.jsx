@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 
-
 @inject('demoStore')
 @observer
 class index extends Component {
   componentDidMount() {
-    this.props.demoStore.fetchList();
+    const { demoStore } = this.props;
+    demoStore.fetchList();
   }
+
   render() {
-    const { todoList } = this.props.demoStore;
+    const { demoStore } = this.props;
+    const { todoList } = demoStore;
     return (
       <ul>
         {
           todoList.map((item) => {
             const { id, name } = item;
-            return <li key={id}>{name}</li>
+            return <li key={id}>{name}</li>;
           })
         }
       </ul>

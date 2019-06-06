@@ -6,7 +6,7 @@ const config = require('./config');
 base.output.publicPath = `http://localhost:${config.dev.port}/`;
 
 base.plugins.unshift(
-  new webpack.HotModuleReplacementPlugin({})
+  new webpack.HotModuleReplacementPlugin({}),
 );
 
 module.exports = Object.assign(base, {
@@ -20,13 +20,13 @@ module.exports = Object.assign(base, {
         target: config.dev.apiUrl,
         changeOrigin: true,
         secure: true,
-      }
+      },
     },
     historyApiFallback: {
       rewrites: [
-        { from: /.*/, to: '/index.html' }
-      ]
-    }
+        { from: /.*/, to: '/index.html' },
+      ],
+    },
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
 });

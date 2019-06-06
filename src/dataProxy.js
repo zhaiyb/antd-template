@@ -9,9 +9,7 @@ import { message } from 'antd';
 axios.defaults.headers.common.timeout = 10000;
 
 // 处理统一处理
-axios.interceptors.response.use((response) => {
-  return response.data;
-}, (error) => {
+axios.interceptors.response.use(response => response.data, (error) => {
   const { response } = error;
   if (response.status === 401) {
     window.location.href = `/login?referrer=${window.location.pathname}`;

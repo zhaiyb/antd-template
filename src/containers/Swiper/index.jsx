@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
 import Swiper from 'swiper';
+import 'swiper/dist/css/swiper.css';
 
 import './index.less';
 
-class index extends Component {
+class ImgSwiper extends Component {
   componentDidMount() {
-    const mySwiper = new Swiper ('.swiper-container', {
+    const mySwiper = new Swiper('.swiper-container', {
       // Optional parameters
-      direction: 'vertical',
+      // direction: 'vertical',
       loop: true,
-  
+
       // If we need pagination
       pagination: {
         el: '.swiper-pagination',
       },
-  
+
       // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-  
+
       // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    })
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+    });
   }
 
   render() {
@@ -40,15 +41,15 @@ class index extends Component {
           <div className="swiper-slide">Slide 3</div>
         </div>
         {/* If we need pagination */}
-        <div className="swiper-pagination"></div>
+        <div className="swiper-pagination" />
         {/* If we need navigation buttons */}
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
+        {/* <div className="swiper-button-prev" />
+        <div className="swiper-button-next" /> */}
         {/* If we need scrollbar  */}
-        <div className="swiper-scrollbar"></div>
+        {/* <div className="swiper-scrollbar" /> */}
       </div>
     );
   }
 }
 
-export default index;
+export default ImgSwiper;

@@ -5,7 +5,7 @@
 import demoStore from './demoStore';
 
 const rootStore = {
-  demoStore
-}
+  demoStore,
+};
 
 export default rootStore;
