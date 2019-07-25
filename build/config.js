@@ -6,6 +6,6 @@ module.exports = {
     // 端口
     port: 5001,
     // 连接后端API的URL
-    apiUrl: 'http://ota.okcoin-inc.com/'
+    apiUrl: 'http://yourserver.com/',
   },
 };

@@ -1,2 +1,2 @@
 # antd-template
-antd、react-router、mobx、webpack、sass脚手架
+antd、react-router、mobx、webpack、less模板
