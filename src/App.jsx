@@ -19,6 +19,9 @@ const routeMap = [{
 }, {
   path: pageURL.swiper,
   component: './containers/Swiper',
+}, {
+  path: pageURL.bizChartsDemo,
+  component: './containers/BizChartsDemo',
 }];
 const App = () => (
   <BrowserRouter>

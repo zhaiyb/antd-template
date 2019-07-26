@@ -22,16 +22,17 @@
     "@babel/polyfill": "^7.4.4",
     "antd": "^3.17.0",
     "axios": "^0.18.0",
+    "bizcharts": "^3.5.4",
     "core-js": "^2.6.5",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
-    "swiper": "^4.5.0",
     "react-hot-loader": "^4.8.4",
-    "react-loadable": "^5.5.0"
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.0.0",
+    "swiper": "^4.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
