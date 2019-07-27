@@ -1,26 +1,17 @@
 {
   "name": "antd-template",
   "version": "1.0.0",
-  "description": "antd、react-router、mobx、webpack、less脚手架",
+  "description": "数据可视化",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.config.dev.js --open",
     "build": "webpack --config build/webpack.config.base.js --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhaiyb/antd-template.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zhaiyb/antd-template/issues"
-  },
-  "homepage": "https://github.com/zhaiyb/antd-template#readme",
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
-    "antd": "^3.17.0",
     "axios": "^0.18.0",
     "bizcharts": "^3.5.4",
     "core-js": "^2.6.5",
